@@ -2,13 +2,12 @@
 
 setlocal
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rem äeéÌê›íË
+rem ÂêÑÁ®ÆË®≠ÂÆö
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rem ÉzÅ[ÉÄÉtÉHÉãÉ_
+rem „Éõ„Éº„É†„Éï„Ç©„É´„ÉÄ
 set HOME=C:\home
-rem ÉxÅ[ÉXURL
-rem set BASEURL=http://ruby.kyoto-wu.ac.jp/michikoshi/progenv/uni
-set BASEURL=http://ruby.kyoto-wu.ac.jp/info-com/Softwares/2022/dl
+rem „Éô„Éº„ÇπURL
+set BASEURL=https://raw.githubusercontent.com/mokab/createrubyenv/main/dl
 set RUBY_DIR_NAME=Ruby31-x64
 
 
@@ -18,7 +17,7 @@ set MSYS2PATH=C:\%RUBY_DIR_NAME%\%MSYS%
 set TMPPATH=C:\%RUBY_DIR_NAME%\%MSYS%\tmp
 
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rem éñëOèÄîı
+rem ‰∫ãÂâçÊ∫ñÂÇô
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 mkdir %HOME%
 
@@ -29,7 +28,7 @@ bitsadmin.exe /TRANSFER htmlget %BASEURL%/terminal.ico %HOME%\winconf\terminal.i
 cscript %HOME%\winconf\mkshortcut.vbs
 
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rem emacsÉCÉìÉXÉgÅ[Éã
+rem emacs„Ç§„É≥„Çπ„Éà„Éº„É´
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rem emcas
 
@@ -44,14 +43,14 @@ if not exist "C:\emacs" (
 )
 
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rem É_ÉEÉìÉçÅ[Éh
+rem „ÉÄ„Ç¶„É≥„É≠„Éº„Éâ
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 mkdir %HOME%\.emacs.d
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/bashrc %HOME%\.bashrc
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/init.el %HOME%\.emacs.d\init.el
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/inputrc %HOME%\.inputrc
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/profile %HOME%\.profile
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/bash_profile %HOME%\.bash_profile
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/bash_logout %HOME%\.bash_logout
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bashrc %HOME%\.bashrc
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/init.el %HOME%\.emacs.d\init.el
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/inputrc %HOME%\.inputrc
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/profile %HOME%\.profile
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bash_profile %HOME%\.bash_profile
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bash_logout %HOME%\.bash_logout
 
 endlocal
