@@ -46,11 +46,11 @@ rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 rem ダウンロード
 rem %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 mkdir %HOME%\.emacs.d
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bashrc %HOME%\.bashrc
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/init.el %HOME%\.emacs.d\init.el
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/inputrc %HOME%\.inputrc
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/profile %HOME%\.profile
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bash_profile %HOME%\.bash_profile
-bitsadmin.exe /TRANSFER htmlget %BASEURL%/dotfiles/bash_logout %HOME%\.bash_logout
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/bashrc %HOME%\.bashrc
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/init.el %HOME%\.emacs.d\init.el
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/inputrc %HOME%\.inputrc
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/profile %HOME%\.profile
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/bash_profile %HOME%\.bash_profile
+bitsadmin.exe /TRANSFER htmlget %BASEURL%/bash_logout %HOME%\.bash_logout
 
 endlocal
